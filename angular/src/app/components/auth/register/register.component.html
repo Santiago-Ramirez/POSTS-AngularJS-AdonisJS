@@ -1,0 +1,54 @@
+<div class="background text-center">
+  <div class="card shadow" style="width: 350px; border-radius: 20px;">
+    <form
+    class="form-signin animated fadeIn"
+    autocomplete="off"
+    [formGroup]="registerForm"
+    (ngSubmit)= "register()"
+  >
+    <img class="mb-4 img" src="assets/logo.png" alt="logo" />
+    <h1 class="h3 mb-3 font-weight-normal">Registrate</h1>
+    <label class="sr-only" for="inputUser">Nombre de usuario</label>
+    <input
+      type="text"
+      class="form-control mb-2"
+      id="inputUser"
+      placeholder="Nombre"
+      formControlName="username"
+      [class.is-invalid]="usernameValidate"
+    />
+    <label class="sr-only" for="inputEmail">Correo electronico</label>
+    <input
+      type="email"
+      class="form-control mb-2"
+      id="inputEmail"
+      placeholder="Correo electronico"
+      formControlName="email"
+      [class.is-invalid]="emailValidate"
+    />
+    <label class="sr-only" for="inputPassword">Contraseña</label>
+    <input
+      type="password"
+      class="form-control mb-3"
+      id="inputPassword"
+      placeholder="Contraseña"
+      formControlName="password"
+      [class.is-invalid]="passwordValidate"
+    />
+    <label class="sr-only" for="inputPassword2">Confirmar Contraseña</label>
+    <input
+      type="password"
+      class="form-control mb-3"
+      id="inputPassword2"
+      placeholder="Confirmar Contraseña"
+      formControlName="password2"
+      [class.is-invalid]="password2Validate"
+    />
+    <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" [disabled]="password2Validate">
+      Registrate
+    </button>
+    Ya tines una cuenta.<a [routerLink]="['/login']">  Inicia sesión aquí</a>
+  </form>
+  </div>
+   
+  </div>

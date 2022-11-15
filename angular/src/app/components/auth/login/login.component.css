@@ -1,0 +1,25 @@
+.background {
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+   
+  .img {
+    width: 150px;
+  }
+   
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+   
+  .form-signin .form-control {
+    height: 45px;
+  }
